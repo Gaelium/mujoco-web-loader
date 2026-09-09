@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mujoco-web-loader — demo</title>
+    <style>
+      body { margin: 0; font: 14px system-ui, sans-serif; background: #14161a; color: #e7e9ee; }
+      #bar { display: flex; gap: 12px; align-items: center; padding: 10px 14px; background: #1d2026; }
+      #bar strong { font-weight: 600; }
+      #status { color: #9aa3b2; }
+      #viewport { display: block; width: 100vw; height: calc(100vh - 46px); }
+      input[type='file'] { color: #9aa3b2; }
+    </style>
+  </head>
+  <body>
+    <div id="bar">
+      <strong>mujoco-web-loader</strong>
+      <input id="files" type="file" multiple accept=".urdf,.xml,.stl,.STL" />
+      <span id="status">select a .urdf and its .stl meshes (multi-select) — it just works</span>
+    </div>
+    <canvas id="viewport"></canvas>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

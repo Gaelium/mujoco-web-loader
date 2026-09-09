@@ -1,0 +1,25 @@
+# CI for the standalone mujoco-web-loader repo. Inert while this directory
+# lives inside the Simulo monorepo (nested .github dirs don't run); becomes
+# the repo's CI verbatim when the directory is published as its own repo.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Typecheck + tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run typecheck
+      - run: npm run test:run
+      - name: Example app builds
+        run: npm run example:build

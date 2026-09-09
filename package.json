@@ -1,0 +1,35 @@
+{
+  "name": "@robot-sim/mujoco-web-loader",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Load real-world URDF robots into MuJoCo WASM in the browser or Node: preprocessing and repair, two-pass actuator/sensor injection, compiled-model caching, and reusable worker plumbing.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p example",
+    "example:dev": "vite --config example/vite.config.ts",
+    "example:build": "vite build --config example/vite.config.ts"
+  },
+  "peerDependencies": {
+    "@mujoco/mujoco": "~3.6.1"
+  },
+  "devDependencies": {
+    "@mujoco/mujoco": "3.6.1",
+    "@types/node": "^24.12.0",
+    "@types/three": "^0.183.1",
+    "jsdom": "^29.0.1",
+    "three": "^0.183.2",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1",
+    "vitest": "^4.1.2"
+  }
+}
