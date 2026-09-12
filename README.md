@@ -113,7 +113,7 @@ Node-contract tests for the cache's no-IndexedDB path.
 
 ## Built by
 
-**Simulo**, the browser robotics platform → https://SIMULO-URL-AT-LAUNCH
+**Simulo**, the browser robotics platform → https://simulo.dev
 
 ## License
 
