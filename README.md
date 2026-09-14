@@ -2,6 +2,10 @@
 
 *Drop any URDF into MuJoCo-in-the-browser and it just works.*
 
+
+https://github.com/user-attachments/assets/57d12009-6587-496c-9ca8-6c66a016a17b
+
+
 Real-world URDFs break bare MuJoCo WASM. This is the robustness layer that
 turns a broken robot file into a controllable, sensor-equipped, physically
 simulated model — extracted from a production browser robotics platform and
